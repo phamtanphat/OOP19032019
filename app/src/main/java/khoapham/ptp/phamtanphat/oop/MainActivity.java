@@ -12,13 +12,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Person nguyenvana = new Person();
-        nguyenvana.ten = "Nguyen Van A";
-        nguyenvana.tuoi = 20;
-        nguyenvana.cachdichuyen("Đi bộ");
-        Log.d("BBB",nguyenvana.Phuongtien);
+        nguyenvana.setTen("Nguyen Van A");
+        nguyenvana.setTuoi(20);
+        nguyenvana.setPhuongtien("Đi bộ");
+        Log.d("BBB",nguyenvana.getTen() + "");
 
         Person nguyenvanb = new Person();
-        nguyenvanb.ten = "Nguyen Van B";
-        nguyenvanb.tuoi = 30;
+        nguyenvanb.setTen("Nguyen Van B");
+        nguyenvanb.setTuoi(25);
+        nguyenvanb.setPhuongtien("Đi xe đạp");
     }
 }
