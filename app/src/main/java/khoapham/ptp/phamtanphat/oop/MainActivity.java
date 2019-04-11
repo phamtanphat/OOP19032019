@@ -27,15 +27,17 @@ public class MainActivity extends AppCompatActivity {
 //        nguyenvana.ten = " Nguyen Van a";
 //        Animal cat = new Animal();
 //        cat.ten = "cat";
-        ShowTen(20);
+//        ShowTen(20);
+        Animal animal = new Animal();
+        animal.setTen("Meo");
     }
 
-    //OVERload : phuong thuc nap chong
-    public void ShowTen(String ten){
-        Toast.makeText(this, ten, Toast.LENGTH_SHORT).show();
-    }
-    public void ShowTen(Integer number){
-        Toast.makeText(this, number + "", Toast.LENGTH_SHORT).show();
-
-    }
+//    //OVERload : phuong thuc nap chong
+//    public void ShowTen(String ten){
+//        Toast.makeText(this, ten, Toast.LENGTH_SHORT).show();
+//    }
+//    public void ShowTen(Integer number){
+//        Toast.makeText(this, number + "", Toast.LENGTH_SHORT).show();
+//
+//    }
 }
