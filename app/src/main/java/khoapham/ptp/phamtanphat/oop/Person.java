@@ -7,6 +7,12 @@ public class Person {
 
     //To hop phim chuc nang alt + insert
 
+    public Person(String ten , Integer tuoi , String phuongtien){
+        this.ten = ten;
+        this.tuoi = tuoi;
+        Phuongtien = phuongtien;
+
+    }
 
     public String getTen() {
         return ten;

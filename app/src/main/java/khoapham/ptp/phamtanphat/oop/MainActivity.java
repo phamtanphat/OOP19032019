@@ -11,15 +11,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Person nguyenvana = new Person();
-        nguyenvana.setTen("Nguyen Van A");
-        nguyenvana.setTuoi(20);
-        nguyenvana.setPhuongtien("Đi bộ");
+        Person nguyenvana = new Person("Nguyen Van A",20 , "Đi bộ");
+//        nguyenvana.setTen("Nguyen Van A");
+//        nguyenvana.setTuoi(20);
+//        nguyenvana.setPhuongtien("Đi bộ");
         Log.d("BBB",nguyenvana.getTen() + "");
 
-        Person nguyenvanb = new Person();
-        nguyenvanb.setTen("Nguyen Van B");
-        nguyenvanb.setTuoi(25);
-        nguyenvanb.setPhuongtien("Đi xe đạp");
+        Person nguyenvanb = new Person("Nguyen Van B" , 25 , "Đi xe");
+//        nguyenvanb.setTen();
+//        nguyenvanb.setTuoi(25);
+//        nguyenvanb.setPhuongtien("Đi xe đạp");
     }
 }
