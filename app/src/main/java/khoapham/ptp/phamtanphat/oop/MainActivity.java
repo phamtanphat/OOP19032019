@@ -3,9 +3,13 @@ package khoapham.ptp.phamtanphat.oop;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Listen{
+
+    Listen listen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +32,15 @@ public class MainActivity extends AppCompatActivity {
 //        Animal cat = new Animal();
 //        cat.ten = "cat";
 //        ShowTen(20);
-        Animal animal = new Animal();
-        animal.setTen("Meo");
+//        Animal animal = new Animal();
+//        animal.setTen("Meo");
+        listen = this;
+        listen.getvalue(20);
+    }
+
+    @Override
+    public void getvalue(int value) {
+        Log.d("BBB",value + "");
     }
 
 //    //OVERload : phuong thuc nap chong
