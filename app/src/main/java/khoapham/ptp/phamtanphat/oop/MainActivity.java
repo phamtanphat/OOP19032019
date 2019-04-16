@@ -7,48 +7,61 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements Listen{
+public class MainActivity extends AppCompatActivity{
 
-    Listen listen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Person nguyenvana = new Person("Nguyen Van A",20 , "Đi bộ");
-//        nguyenvana.setTen("Nguyen Van A");
-//        nguyenvana.setTuoi(20);
-//        nguyenvana.setPhuongtien("Đi bộ");
-
-//        Log.d("BBB",nguyenvana.getTen() + "");
-
-//        Person nguyenvanb = new Person("Nguyen Van B" , 25 , "Đi xe");
-//        nguyenvanb.setTen();
-//        nguyenvanb.setTuoi(25);
-//        nguyenvanb.setPhuongtien("Đi xe đạp");
-//        Person nguyenvana = new Person();
-//        nguyenvana.ten = " Nguyen Van a";
-//        Animal cat = new Animal();
-//        cat.ten = "cat";
-//        ShowTen(20);
-//        Animal animal = new Animal();
-//        animal.setTen("Meo");
-        listen = this;
-        listen.getvalue(20);
+//        insochan();
+//        insole();
+//        insochia3du1();
+//        insochinhphuong();
+//        inso(1 , 3);
+        inso(new Xuly() {
+            @Override
+            public boolean checkdk(int i) {
+                if(i % 3 == 1){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        });
     }
 
-    @Override
-    public void getvalue(int value) {
-        Log.d("BBB",value + "");
+    private void inso(Xuly xuly ) {
+        for (int i = 0 ; i <= 100 ; i++){
+            boolean dk = xuly.checkdk(i);
+            if( dk ) Log.d("BBB", i + "");
+        }
     }
 
-//    //OVERload : phuong thuc nap chong
-//    public void ShowTen(String ten){
-//        Toast.makeText(this, ten, Toast.LENGTH_SHORT).show();
-//    }
-//    public void ShowTen(Integer number){
-//        Toast.makeText(this, number + "", Toast.LENGTH_SHORT).show();
-//
-//    }
+    private void insochinhphuong() {
+        for (int i = 0 ; i <= 100 ; i++){
+            if( Math.sqrt(i) % 1 == 0) Log.d("BBB", i + "");
+        }
+    }
+
+    private void insochia3du1() {
+        for (int i = 0 ; i <= 100 ; i++){
+            if( i % 3 == 1) Log.d("BBB", i + "");
+        }
+    }
+
+    private void insole() {
+        for (int i = 0 ; i <= 100 ; i++){
+            if( i % 2 == 1) Log.d("BBB", i + "");
+        }
+    }
+
+    private void insochan(){
+        for (int i = 0 ; i <= 100 ; i++){
+            if( i % 2 == 0) Log.d("BBB", i + "");
+        }
+    }
+
 }
